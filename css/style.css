@@ -1,0 +1,536 @@
+:root {
+    --light: #ffffff;
+    --dark: #000000;
+    --blue: #2297c3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px;
+    width: 100%;
+    position: fixed;
+    transition: 0.5s ease-in-out;
+}
+
+header.sticky {
+    padding: 10px 100px;
+    background-color: var(--light);
+    z-index: 1000;
+    box-shadow: 0px 4px 24px #adadad;
+}
+
+header .logo {
+    display: flex;
+    text-decoration: none;
+    color: var(--light);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header.sticky .logo {
+    color: var(--dark);
+}
+
+header .navigation {
+    display: flex;
+}
+
+header .navigation li {
+    list-style-type: none;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    margin-left: 30px;
+    color: var(--light);
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: 0.3s ease-in-out;
+}
+
+header .navigation li a:hover {
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+    color: var(--blue);
+}
+
+header.sticky .navigation li a {
+    color: var(--dark);
+    font-size: 0.9rem;
+}
+
+header.sticky .navigation li a:hover {
+    color: var(--blue);
+    font-size: 1rem;
+}
+
+section {
+    padding: 40px 50px 100px 50px;
+}
+
+.banner {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    background-position: right;
+}
+
+.banner .titletext {
+    color: var(--light);
+}
+
+.banner .titletext h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 4rem;
+}
+
+.banner .titletext h2 span {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.banner .titletext p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1rem;
+}
+
+.about .titletext {
+    margin-bottom: 20px;
+}
+
+.about .titletext h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.about .contianer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about .contianer .box {
+    width: 47%;
+    position: relative;
+}
+
+.about .contianer .box h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.about .contianer .box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services {
+    background-color: var(--dark);
+}
+
+.services .titletext {
+    color: var(--light);
+    text-align: center;
+}
+
+.services .titletext h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.services .contianer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.services .contianer .box {
+    color: var(--light);
+    background-color: #2b2b2b;
+    text-align: center;
+    width: 360px;
+    height: 40%;
+    padding: 30px;
+    border-radius: 5%;
+    margin: 30px 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.services .contianer .box:hover {
+    opacity: 0.8;
+    background-color: var(--blue);
+    transition: 0.3s ease-in-out;
+}
+
+.services .contianer .box img {
+    width: 38%;
+}
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.works .titletext {
+    text-align: center;
+}
+
+.works .titletext h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.works .contianer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.works .contianer .boxx {
+    width: 350px;
+    margin: 20px;
+    display: none;
+}
+
+.works .contianer .boxx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7%;
+}
+
+section.contact {
+    background-color: var(--dark);
+    padding: 40px 50px 10px 50px;
+}
+
+.contact .titletext {
+    text-align: center;
+    color: var(--light);
+}
+
+.contact .titletext h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.contact .contianer {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 33px;
+}
+
+.contact .contianer .contactinfobx {
+    width: 40%;
+}
+
+.contact .contianer .contactinfobx h3 {
+    color: var(--light);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.contact .contianer .contactinfobx .box {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.contact .contianer .contactinfobx .box .icon {
+    margin-right: 35px;
+}
+
+.contact .contianer .contactinfobx .box .icon img {
+    width: 30px;
+}
+
+.contact .contianer .contactinfobx .box .text {
+    color: var(--light);
+}
+
+.contact .contianer .contactinfobx .box .text h4 {
+    color: var(--blue);
+    line-height: 29px;
+}
+
+form#myForm {
+    width: 100%;
+}
+
+.contact .contianer .formbx {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .contianer .formbx h3 {
+    color: var(--light);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact .contianer .formbx input,
+.contact .contianer .formbx textarea {
+    resize: none;
+    padding: 10px;
+    margin-bottom: 17px;
+    background-color: #2d2d2d;
+    border: 0;
+}
+
+.contact .contianer .formbx textarea {
+    min-height: 78px;
+}
+
+.contact .contianer .formbx input[type="submit"] {
+    width: 100px;
+    background-color: var(--blue);
+    border: 0;
+    color: var(--light);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contact .contianer .formbx input::placeholder,
+.contact .contianer .formbx textarea::placeholder {
+    color: var(--light);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.contact footer {
+    color: var(--light);
+    text-align: center;
+}
+
+.contact footer p a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+@media(max-width:990px) {
+    header {
+        padding: 15px 17px;
+        z-index: 100;
+        transition: 0.2s ease-in-out;
+    }
+    header .menutoggle {
+        background-image: url(../images/menu.png);
+        width: 30px;
+        height: 27px;
+        background-repeat: no-repeat;
+        background-size: 40px;
+        cursor: pointer;
+    }
+    header .menutoggle.active {
+        background-image: url(../images/close.png);
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        z-index: 100;
+        background-size: 30px;
+    }
+    header .navigation {
+        display: none;
+    }
+    header .navigation li a {
+        color: #000000;
+        font-size: 1.9rem;
+    }
+    header .navigation li a:hover {
+        transition: 0.2s ease-in-out;
+        font-size: 2.3rem;
+    }
+    header.sticky .navigation li a {
+        color: var(--dark);
+        font-size: 1.9rem;
+    }
+    header.sticky .navigation li a:hover {
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+    header .navigation.active {
+        display: flex;
+        position: fixed;
+        top: 60px;
+        left: 0px;
+        width: 100%;
+        height: calc(100% - 60px);
+        background-color: #ffffff;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    header.sticky {
+        padding: 15px 17px;
+    }
+    header.sticky .menutoggle {
+        filter: invert(1);
+    }
+    .banner .titletext h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+    }
+    .banner .titletext h2 span {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    .banner .titletext p {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .btn {
+        background-color: #2297c3;
+        width: 120px;
+        text-align: center;
+        margin-top: 20px;
+        transition: 0.5s ease-in-out;
+    }
+    .btn:hover {
+        padding: 6px;
+    }
+    section {
+        padding: 20px 10px 35px 10px;
+    }
+    .about .titletext {
+        margin-bottom: 0px;
+    }
+    .about .titletext h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .about .contianer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+    }
+    .about .contianer .box {
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+    .about .contianer .box h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 34px;
+    }
+    .about .contianer .box img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+    .services .titletext h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .services .contianer .box {
+        width: 337px;
+        margin: 15px 15px;
+    }
+    .works .titletext h2 {
+        font-size: 1.5rem;
+    }
+    .works .contianer .box {
+        margin: 12px;
+    }
+    section.contact {
+        padding: 40px 20px 10px 20px;
+    }
+    .contact .titletext h2 {
+        font-size: 1.5rem;
+    }
+    .contact .contianer {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-top: 33px;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    .contact .contianer .contactinfobx {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .contianer .contactinfobx .box {
+        display: flex;
+        margin-bottom: 16px;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact .contianer .contactinfobx .box .icon {
+        margin-right: 0px;
+    }
+    .contact .contianer .contactinfobx .box .text {
+        color: var(--light);
+        text-align: center;
+    }
+    .contact .contianer .formbx {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+    }
+    .contact .contianer .formbx h3 {
+        text-align: center;
+    }
+}
+
+h4.sent-notification {
+    width: 214px;
+    height: 40px;
+    color: #56ff00;
+}
