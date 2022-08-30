@@ -19,7 +19,7 @@
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
         $mail->Username = "bilalshop20@gmail.com"; //enter you email address
-        $mail->Password = 'amv183794652'; //enter you email password
+        $mail->Password = 'test20'; //enter you email password
         $mail->Port = 465;
         $mail->SMTPSecure = "ssl";
 
